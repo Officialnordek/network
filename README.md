@@ -31,7 +31,7 @@
 ## General
 ### Clone Repository
 ```
-$ git clone https://github.com/fkt20/network.git ~/Dev/network
+$ git clone https://github.com/Officialnordek/network.git ~/Dev/network
 ```
 
 ### Install Dependencies
@@ -61,9 +61,9 @@ $ npm run flatten
 ```
 
 ### Deploy
-Make sure `NETWORK_NAME` is defined in [`truffle-config`](https://github.com/fkt20/network/blob/master/truffle-config.js)
+Make sure `NETWORK_NAME` is defined in [`truffle-config`](https://github.com/Officialnordek/network/blob/master/truffle-config.js)
 
-Make sure you've created an `.env` using the template [`env.example`](https://github.com/fkt20/network/blob/master/.env.example)
+Make sure you've created an `.env` using the template [`env.example`](https://github.com/Officialnordek/network/blob/master/.env.example)
 
 Run:
 
@@ -73,4 +73,4 @@ $ ./node_modules/.bin/truffle migrate --reset --network <NETWORK_NAME>
 
 ## Run Local Node
 
-Read more at: [https://github.com/fkt20/FAKTNetwork/tree/master/node-example](https://github.com/fkt20/FAKTNetwork/tree/master/node-example)
+Read more at: [https://github.com/Officialnordek/NRKTNetwork/tree/master/node-example](https://github.com/Officialnordek/NRKTNetwork/tree/master/node-example)
