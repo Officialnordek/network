@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity 0.4.26;
 
 import "./abstracts/ValidatorSet.sol";
 import "./eternal-storage/EternalStorage.sol";

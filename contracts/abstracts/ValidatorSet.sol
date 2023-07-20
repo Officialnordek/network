@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity 0.4.26;
 
 /**
  * @title Interface to be implemented by consensus contract
