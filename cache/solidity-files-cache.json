@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/root/mainnet/fuse-network/contracts/BlockReward.sol": {
-      "lastModificationDate": 1669859860150,
-      "contentHash": "a42d946c857f9266ab41877e303a396f",
+    "/root/DevForAudit/network/contracts/BlockReward.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "05feef0735c9d24df2c6bad91a727791",
       "sourceName": "contracts/BlockReward.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -36,15 +36,15 @@
         "openzeppelin-solidity/contracts/math/SafeMath.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "BlockReward"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/abstracts/BlockRewardBase.sol": {
-      "lastModificationDate": 1666677515400,
-      "contentHash": "8ca88d454f38894bd807bf81c278e32c",
+    "/root/DevForAudit/network/contracts/abstracts/BlockRewardBase.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "f859dbd029f084b3c733ed76e3b6a9cb",
       "sourceName": "contracts/abstracts/BlockRewardBase.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -71,15 +71,15 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "BlockRewardBase"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/interfaces/IConsensus.sol": {
-      "lastModificationDate": 1666677515400,
-      "contentHash": "5a923a01abf2b6595ce10cf206fd2e62",
+    "/root/DevForAudit/network/contracts/interfaces/IConsensus.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "b5289eb7d450cd180b4d55ec4c19438d",
       "sourceName": "contracts/interfaces/IConsensus.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -106,50 +106,15 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "IConsensus"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/eternal-storage/EternalStorage.sol": {
-      "lastModificationDate": 1666677515400,
-      "contentHash": "79d5f5dd9b4e55d70bdf72a87f5d6f18",
-      "sourceName": "contracts/eternal-storage/EternalStorage.sol",
-      "solcConfig": {
-        "version": "0.4.26",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.4.24"
-      ],
-      "artifacts": [
-        "EternalStorage"
-      ]
-    },
-    "/root/mainnet/fuse-network/contracts/ProxyStorage.sol": {
-      "lastModificationDate": 1666677515399,
-      "contentHash": "f2b7d92004968f4a0a340e5a1fc3c5dc",
+    "/root/DevForAudit/network/contracts/ProxyStorage.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "5b5fe58d4103bfea7ee89619f0678f2d",
       "sourceName": "contracts/ProxyStorage.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -180,14 +145,49 @@
         "openzeppelin-solidity/contracts/math/SafeMath.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "ProxyStorage"
       ]
     },
-    "/root/mainnet/fuse-network/node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol": {
-      "lastModificationDate": 1667297146091,
+    "/root/DevForAudit/network/contracts/eternal-storage/EternalStorage.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "52e8e80f1e4190c0e2febd4898f08598",
+      "sourceName": "contracts/eternal-storage/EternalStorage.sol",
+      "solcConfig": {
+        "version": "0.4.26",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.4.26"
+      ],
+      "artifacts": [
+        "EternalStorage"
+      ]
+    },
+    "/root/DevForAudit/network/node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol": {
+      "lastModificationDate": 1689820461320,
       "contentHash": "4431058fb47f3e74b9b0f9d89b677476",
       "sourceName": "openzeppelin-solidity/contracts/math/SafeMath.sol",
       "solcConfig": {
@@ -221,9 +221,9 @@
         "SafeMath"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/eternal-storage/EternalStorageProxy.sol": {
-      "lastModificationDate": 1666677515400,
-      "contentHash": "f70db94efb39875a3d3522e760dd4a97",
+    "/root/DevForAudit/network/contracts/eternal-storage/EternalStorageProxy.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "5cc793c5f092a22bcdb4f60f3edf22cb",
       "sourceName": "contracts/eternal-storage/EternalStorageProxy.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -252,15 +252,15 @@
         "./EternalStorage.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "EternalStorageProxy"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/test/BlockRewardMock.sol": {
-      "lastModificationDate": 1666677515401,
-      "contentHash": "053faf8545488fe691cf4e95c6efcbf0",
+    "/root/DevForAudit/network/contracts/test/BlockRewardMock.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "f5fb203c1ccfc7e1af5d829e40569ae4",
       "sourceName": "contracts/test/BlockRewardMock.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -289,15 +289,15 @@
         "../BlockReward.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "BlockRewardMock"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/VotingUtils.sol": {
-      "lastModificationDate": 1666677515400,
-      "contentHash": "264bf56c4826ab34ba9c99d7ad894636",
+    "/root/DevForAudit/network/contracts/VotingUtils.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "31d4526dd004e05c5d5f7ebc9d3d1237",
       "sourceName": "contracts/VotingUtils.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -330,15 +330,15 @@
         "openzeppelin-solidity/contracts/math/SafeMath.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "VotingUtils"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/abstracts/VotingBase.sol": {
-      "lastModificationDate": 1666677515400,
-      "contentHash": "a424292f99363023f98e7e1eb6aab1a1",
+    "/root/DevForAudit/network/contracts/abstracts/VotingBase.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "19ef7024c49490890a4a5de627306fae",
       "sourceName": "contracts/abstracts/VotingBase.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -365,15 +365,15 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "VotingBase"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/test/ProxyStorageMock.sol": {
-      "lastModificationDate": 1666677515401,
-      "contentHash": "8cc30b0551940a7d554dd87a1fad1aa3",
+    "/root/DevForAudit/network/contracts/test/ProxyStorageMock.sol": {
+      "lastModificationDate": 1689819158982,
+      "contentHash": "48aae1aa04515ac314bf4b7c706815ad",
       "sourceName": "contracts/test/ProxyStorageMock.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -402,15 +402,15 @@
         "../ProxyStorage.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "ProxyStorageMock"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/test/EternalStorageProxyMock.sol": {
-      "lastModificationDate": 1666677515401,
-      "contentHash": "a7cda4f078f9d555ec427416fe376b1a",
+    "/root/DevForAudit/network/contracts/test/EternalStorageProxyMock.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "07a7b66e324bd4266cf2507b74717668",
       "sourceName": "contracts/test/EternalStorageProxyMock.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -439,15 +439,15 @@
         "../eternal-storage/EternalStorageProxy.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "EternalStorageProxyMock"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/ConsensusUtils.sol": {
-      "lastModificationDate": 1669781205291,
-      "contentHash": "68813e70aaa87a7e89efabe2bbd2608c",
+    "/root/DevForAudit/network/contracts/ConsensusUtils.sol": {
+      "lastModificationDate": 1689819905842,
+      "contentHash": "f0da8dc4e3991c74a8c58e0bbec22069",
       "sourceName": "contracts/ConsensusUtils.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -480,15 +480,15 @@
         "openzeppelin-solidity/contracts/math/Math.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "ConsensusUtils"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/abstracts/ValidatorSet.sol": {
-      "lastModificationDate": 1666677515400,
-      "contentHash": "bb3c49511cc04ac1c9dcc28b7dcff880",
+    "/root/DevForAudit/network/contracts/abstracts/ValidatorSet.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "fdb7f97986d99bc72c184721138d71fe",
       "sourceName": "contracts/abstracts/ValidatorSet.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -515,14 +515,14 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "ValidatorSet"
       ]
     },
-    "/root/mainnet/fuse-network/node_modules/openzeppelin-solidity/contracts/math/Math.sol": {
-      "lastModificationDate": 1667297146091,
+    "/root/DevForAudit/network/node_modules/openzeppelin-solidity/contracts/math/Math.sol": {
+      "lastModificationDate": 1689820461320,
       "contentHash": "5c717b991ea4cb0e9cc3ad8ce04b350a",
       "sourceName": "openzeppelin-solidity/contracts/math/Math.sol",
       "solcConfig": {
@@ -556,9 +556,9 @@
         "Math"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/Consensus.sol": {
-      "lastModificationDate": 1666677515399,
-      "contentHash": "046fff51f670beadd8c3560ec6e161ef",
+    "/root/DevForAudit/network/contracts/Consensus.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "b59fe1e1f037d0e6838936792930d9a6",
       "sourceName": "contracts/Consensus.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -589,15 +589,15 @@
         "./ConsensusUtils.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "Consensus"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/interfaces/IBlockReward.sol": {
-      "lastModificationDate": 1666677515400,
-      "contentHash": "b4d910dd2a828912ba2b1a85db8d4888",
+    "/root/DevForAudit/network/contracts/interfaces/IBlockReward.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "00967d8dc8569a3142bc6aa4fdc8ea8e",
       "sourceName": "contracts/interfaces/IBlockReward.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -624,15 +624,15 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "IBlockReward"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/interfaces/IVoting.sol": {
-      "lastModificationDate": 1666677515401,
-      "contentHash": "21a44ed72dd05b9a42f6f3b7d578fead",
+    "/root/DevForAudit/network/contracts/interfaces/IVoting.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "da7ae35e9c3a760fb8d754b5da09f708",
       "sourceName": "contracts/interfaces/IVoting.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -659,15 +659,15 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "IVoting"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/test/ConsensusMock.sol": {
-      "lastModificationDate": 1666677515401,
-      "contentHash": "34eb5d987e5a621a9a652e933d5ca689",
+    "/root/DevForAudit/network/contracts/test/ConsensusMock.sol": {
+      "lastModificationDate": 1689819977341,
+      "contentHash": "81d522dadaf44a29167116cb52048527",
       "sourceName": "contracts/test/ConsensusMock.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -696,15 +696,15 @@
         "../Consensus.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "ConsensusMock"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/Voting.sol": {
-      "lastModificationDate": 1666677515400,
-      "contentHash": "a04f5d9e1e4a6c30193d2bc225e6413d",
+    "/root/DevForAudit/network/contracts/Voting.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "5829d4744611e160abe867d819ea3377",
       "sourceName": "contracts/Voting.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -734,15 +734,15 @@
         "./interfaces/IConsensus.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "Voting"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/test/VotingMock.sol": {
-      "lastModificationDate": 1666677515401,
-      "contentHash": "27b10933c717f24b693d697cc3df65b8",
+    "/root/DevForAudit/network/contracts/test/VotingMock.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "637d58eb0883b41b97da56306d908010",
       "sourceName": "contracts/test/VotingMock.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -771,15 +771,15 @@
         "../Voting.sol"
       ],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "VotingMock"
       ]
     },
-    "/root/mainnet/fuse-network/contracts/Migrations.sol": {
-      "lastModificationDate": 1664950491263,
-      "contentHash": "f9b141aea33e45a17153f854307f8988",
+    "/root/DevForAudit/network/contracts/Migrations.sol": {
+      "lastModificationDate": 1689819158978,
+      "contentHash": "f7046b541323cd02e0f3801fe88d957f",
       "sourceName": "contracts/Migrations.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -806,7 +806,7 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.4.24"
+        "0.4.26"
       ],
       "artifacts": [
         "Migrations"

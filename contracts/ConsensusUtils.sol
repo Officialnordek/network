@@ -18,7 +18,7 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
   uint256 public constant MIN_STAKE = 1e23; // 100,000
   uint256 public constant MAX_STAKE = 5e24; // 5,000,000
   uint256 public constant CYCLE_DURATION_BLOCKS = 34560; // 48 hours [48*60*60/5]
-  uint256 public constant SNAPSHOTS_PER_CYCLE = 0; // snapshot each 288 minutes [34560/10/60*5]
+  // uint256 public constant SNAPSHOTS_PER_CYCLE = 0; // snapshot each 288 minutes [34560/10/60*5]
   uint256 public constant DEFAULT_VALIDATOR_FEE = 15e16; // 15%
   uint256 public constant VALIDATOR_PRODUCTIVITY_BP = 3000; // 30%
   uint256 public constant MAX_STRIKE_COUNT = 5;
@@ -253,49 +253,6 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
 
   function getReleaseBlock(address _validator) public view returns(uint256) {
     return uintStorage[keccak256(abi.encodePacked("releaseBlock", _validator))];
-  }
-
-  /**
-  * returns number of pending validator snapshots to be saved each cycle
-  */
-  function getSnapshotsPerCycle() public pure returns(uint256) {
-    return SNAPSHOTS_PER_CYCLE;
-  }
-
-  function _setLastSnapshotTakenAtBlock(uint256 _block) internal {
-    uintStorage[LAST_SNAPSHOT_TAKEN_AT_BLOCK] = _block;
-  }
-
-  function getLastSnapshotTakenAtBlock() public view returns(uint256) {
-    return uintStorage[LAST_SNAPSHOT_TAKEN_AT_BLOCK];
-  }
-
-  function _setNextSnapshotId(uint256 _id) internal {
-    uintStorage[NEXT_SNAPSHOT_ID] = _id;
-  }
-
-  function getNextSnapshotId() public view returns(uint256) {
-    return uintStorage[NEXT_SNAPSHOT_ID];
-  }
-
-  function _setSnapshot(uint256 _snapshotId, address[] _addresses) internal {
-    uint256 len = _addresses.length;
-    uint256 n = Math.min(getMaxValidators(), len);
-    address[] memory _result = new address[](n);
-    uint256 rand = _getSeed();
-    for (uint256 i = 0; i < n; i++) {
-      uint256 j = rand % len;
-      _result[i] = _addresses[j];
-      _addresses[j] = _addresses[len - 1];
-      delete _addresses[len - 1];
-      len--;
-      rand = uint256(keccak256(abi.encodePacked(rand)));
-    }
-    _setSnapshotAddresses(_snapshotId, _result);
-  }
-
-  function _setSnapshotAddresses(uint256 _snapshotId, address[] _addresses) internal {
-    addressArrayStorage[keccak256(abi.encodePacked("snapshot", _snapshotId, "addresses"))] = _addresses;
   }
 
   function getSnapshotAddresses(uint256 _snapshotId) public view returns(address[]) {
@@ -612,14 +569,6 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
 
   function _hasCycleEnded() internal view returns(bool) {
     return (block.number >= getCurrentCycleEndBlock());
-  }
-
-  function _getSeed() internal view returns(uint256) {
-    return uint256(keccak256(abi.encodePacked(blockhash(block.number - 1))));
-  }
-
-  function _getRandom(uint256 _from, uint256 _to) internal view returns(uint256) {
-    return _getSeed().mod(_to.sub(_from)).add(_from);
   }
 
   function validatorFee(address _validator) public view returns(uint256) {

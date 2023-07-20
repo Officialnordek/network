@@ -9,45 +9,33 @@ import "dotenv/config";
 import "@nomiclabs/hardhat-etherscan";
 import "hardhat-change-network";
 
-// const bscTestnet: NetworkUserConfig = {
-//   url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
-//   chainId: 97,
-//   accounts: [process.env.KEY_TESTNET!],
-// };
 
-
-
-const homeMainnet: NetworkUserConfig = {
-  url: 'http://localhost:8545',
-  chainId: 39656,
+const nordekMainnet: NetworkUserConfig = {
+  url: 'https://mainnet-rpc.nordekscan.com',
+  chainId: 81041,
   accounts: [process.env.KEY_MAINNET!],
 };
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: "nordekMainnet",
   networks: {
     hardhat: {
-      // gas: 120000000,
-      // blockGasLimit: 0x1fffffffffffff,
     },
-    // testnet: bscTestnet,
-    homeMainnet,
+    nordekMainnet,
   },
-  // etherscan: {
-  //   apiKey: {
-  //     homeMainnet:'123',
-  //   },
-  //   customChains: [
-  //     {
-  //       network: "homeMainnet",
-  //       chainId: 32344,
-  //       urls: {
-  //         apiURL: 'https://explorer.tlchain.live/api',
-  //         browserURL: 'https://explorer.tlchain.live',
-  //       },
-  //     }
-  //   ],
-  // },
+  etherscan: {
+    apiKey: process.env.API_KEY!,
+    customChains: [
+      {
+        network: "nordekMainnet",
+        chainId: 81041,
+        urls: {
+          apiURL: 'https://nordekscan.com/api',
+          browserURL: 'https://nordekscan.com',
+        },
+      }
+    ],
+  },
   solidity: {
     compilers: [
       {

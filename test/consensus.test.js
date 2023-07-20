@@ -87,7 +87,7 @@ contract('Consensus', async (accounts) => {
       MAX_STAKE.should.be.bignumber.equal(await consensus.getMaxStake())
       toBN(MAX_VALIDATORS).should.be.bignumber.equal(await consensus.getMaxValidators())
       toBN(CYCLE_DURATION_BLOCKS).should.be.bignumber.equal(await consensus.getCycleDurationBlocks())
-      toBN(SNAPSHOTS_PER_CYCLE).should.be.bignumber.equal(await consensus.getSnapshotsPerCycle())
+      // toBN(SNAPSHOTS_PER_CYCLE).should.be.bignumber.equal(await consensus.getSnapshotsPerCycle())
       ZERO.should.be.bignumber.equal(await consensus.stakeAmount(initialValidator))
       ZERO.should.be.bignumber.equal(await consensus.totalStakeAmount())
       false.should.be.equal(await consensus.hasCycleEnded())

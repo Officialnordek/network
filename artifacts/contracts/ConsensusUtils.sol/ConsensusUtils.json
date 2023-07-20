@@ -6,20 +6,6 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "getLastSnapshotTakenAtBlock",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
       "name": "jailedValidatorsLength",
       "outputs": [
         {
@@ -129,20 +115,6 @@
         }
       ],
       "name": "delegatedAmount",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "SNAPSHOTS_PER_CYCLE",
       "outputs": [
         {
           "name": "",
@@ -445,20 +417,6 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "getSnapshotsPerCycle",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "pure",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
       "name": "requiredSignatures",
       "outputs": [
         {
@@ -751,20 +709,6 @@
         }
       ],
       "name": "delegatorsLength",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getNextSnapshotId",
       "outputs": [
         {
           "name": "",
