@@ -100,7 +100,7 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
 
   function _delegate(address _staker, uint256 _amount, address _validator) internal {
     require(_staker != address(0));
-    require(_amount != 0);
+    require(_amount > 0);
     require(_validator != address(0));
 
     _delegatedAmountAdd(_staker, _validator, _amount);
@@ -222,11 +222,11 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
 
   function _checkJail(address[] _validatorSet) internal {
     uint256 expectedNumberOfBlocks = getCycleDurationBlocks().mul(VALIDATOR_PRODUCTIVITY_BP).div(_validatorSet.length).div(10000);
-    for (uint i = 0; i < _validatorSet.length; i++) {
+    for (uint i; i < _validatorSet.length; i+=1) {
       if(blockCounter(_validatorSet[i]) < expectedNumberOfBlocks) {
         // Validator hasn't met the desired uptime jail them and remove them from the next cycle
         _jailValidator(_validatorSet[i]);
-      } else if (getStrikes(_validatorSet[i]) != 0) {
+      } else if (getStrikes(_validatorSet[i]) > 0) {
         // Validator has met desired uptime and has strikes, inc the strike reset
         _incStrikeReset(_validatorSet[i]);
       }
@@ -279,7 +279,7 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
   }
 
   function isValidator(address _address) public view returns(bool) {
-    for (uint256 i; i < currentValidatorsLength(); i++) {
+    for (uint256 i; i < currentValidatorsLength(); i+=1) {
       if (_address == currentValidatorsAtPosition(i)) {
         return true;
       }
@@ -288,7 +288,7 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
   }
 
   function isJailed(address _address) public view returns(bool) {
-    for (uint256 i; i < jailedValidatorsLength(); i++) {
+    for (uint256 i; i < jailedValidatorsLength(); i+=1) {
       if (_address == jailedValidatorsAtPosition(i)) {
         return true;
       }
@@ -306,7 +306,7 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
 
   function _setCurrentValidators(address[] _currentValidators) internal {
     uint256 totalStake = 0;
-    for (uint i = 0; i < _currentValidators.length; i++) {
+    for (uint i; i < _currentValidators.length; i+=1) {
       uint256 stakedAmount = stakeAmount(_currentValidators[i]);
       totalStake = totalStake + stakedAmount;
 
@@ -338,7 +338,7 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
   }
 
   function isPendingValidator(address _address) public view returns(bool) {
-    for (uint256 i; i < pendingValidatorsLength(); i++) {
+    for (uint256 i; i < pendingValidatorsLength(); i+=1) {
       if (_address == pendingValidatorsAtPosition(i)) {
         return true;
       }
@@ -378,7 +378,7 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
   function _jailedValidatorRemove(address _address) internal {
     bool found = false;
     uint256 removeIndex;
-    for (uint256 i; i < jailedValidatorsLength(); i++) {
+    for (uint256 i; i < jailedValidatorsLength(); i+=1) {
       if (_address == jailedValidatorsAtPosition(i)) {
         removeIndex = i;
         found = true;
@@ -400,7 +400,7 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
   function _pendingValidatorsRemove(address _address) internal {
     bool found = false;
     uint256 removeIndex;
-    for (uint256 i; i < pendingValidatorsLength(); i++) {
+    for (uint256 i; i < pendingValidatorsLength(); i+=1) {
       if (_address == pendingValidatorsAtPosition(i)) {
         removeIndex = i;
         found = true;
@@ -484,7 +484,7 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
   }
 
   function isDelegator(address _validator, address _address) public view returns(bool) {
-    for (uint256 i; i < delegatorsLength(_validator); i++) {
+    for (uint256 i; i < delegatorsLength(_validator); i+=1) {
       if (_address == delegatorsAtPosition(_validator, i)) {
         return true;
       }
@@ -503,7 +503,7 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
   function _delegatorsRemove(address _address, address _validator) internal {
     bool found = false;
     uint256 removeIndex;
-    for (uint256 i; i < delegatorsLength(_validator); i++) {
+    for (uint256 i; i < delegatorsLength(_validator); i+=1) {
       if (_address == delegatorsAtPosition(_validator, i)) {
         removeIndex = i;
         found = true;
@@ -526,7 +526,7 @@ contract ConsensusUtils is EternalStorage, ValidatorSet {
     uint256[] memory _rewards = new uint256[](_delegators.length);
     uint256 divider = Math.max(getMinStake(), stakeAmount(_validator));
 
-    for (uint256 i; i < _delegators.length; i++) {
+    for (uint256 i; i < _delegators.length; i+=1) {
       uint256 _amount = delegatedAmount(delegatorsAtPosition(_validator, i), _validator);
       _rewards[i] = _rewardAmount.mul(_amount).div(divider).mul(DECIMALS - validatorFee(_validator)).div(DECIMALS);
     }

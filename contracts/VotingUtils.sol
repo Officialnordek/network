@@ -74,7 +74,7 @@ contract VotingUtils is EternalStorage, VotingBase {
   function isValidVotingKey(address _address) public view returns(bool) {
     bool valid = false;
     IConsensus consensus = IConsensus(ProxyStorage(getProxyStorage()).getConsensus());
-    for (uint256 i; i < consensus.currentValidatorsLength(); i++) {
+    for (uint256 i; i < consensus.currentValidatorsLength(); i+=1) {
       address validator = consensus.currentValidatorsAtPosition(i);
       if (validator == _address) {
         valid = true;
@@ -107,7 +107,7 @@ contract VotingUtils is EternalStorage, VotingBase {
     if (_key == address(0)) {
       return false;
     }
-    return getVoterChoice(_id, _key) != 0;
+    return getVoterChoice(_id, _key) > 0;
   }
 
   /**

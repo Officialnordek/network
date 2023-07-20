@@ -22,7 +22,7 @@ contract ConsensusMock is Consensus {
   }
 
   function setStakeAmountMockGroup(address[] _newSet) public {
-    for (uint256 i; i < _newSet.length; i++) {
+    for (uint256 i; i < _newSet.length; i+=1) {
        _stakeAmountAdd(_newSet[i],1000000000000000000);
     }
   }
@@ -56,7 +56,7 @@ contract ConsensusMock is Consensus {
   }
 
   function currentValidatorsLength() public view returns(uint256) {
-    if (currentValidatorsLengthMock != 0) {
+    if (currentValidatorsLengthMock > 0) {
       return currentValidatorsLengthMock;
     }
     return super.currentValidatorsLength();

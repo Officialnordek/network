@@ -59,7 +59,7 @@ contract MultiSigWallet {
             "invalid number of required confirmations"
         );
 
-        for (uint i = 0; i < _owners.length; i++) {
+        for (uint i; i < _owners.length; i+=1) {
             address owner = _owners[i];
 
             require(owner != address(0), "invalid owner");

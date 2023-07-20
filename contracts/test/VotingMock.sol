@@ -6,11 +6,11 @@ contract VotingMock is Voting {
 
   bytes32 internal constant CONSESNSUS_MOCK = keccak256(abi.encodePacked("consensusMock"));
  
-  function setNextBallotIdMock(uint256 _id) public {
+  function setNextBallotIdMock(uint256 _id) internal {
     uintStorage[NEXT_BALLOT_ID] = _id;
   }
 
-  function setConsensusMock(address _consensus) public {
+  function setConsensusMock(address _consensus) internal {
     addressStorage[CONSESNSUS_MOCK] = _consensus;
   }
 

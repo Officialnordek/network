@@ -94,7 +94,7 @@ contract BlockReward is EternalStorage, BlockRewardBase {
 
     receivers[0] = benefactors[0];
     rewards[0] = blockRewardAmount;
-    for (uint256 i = 1; i <= _delegators.length; i++) {
+    for (uint256 i = 1; i <= _delegators.length; i+=1) {
       receivers[i] = _delegators[i - 1];
       rewards[i] = _rewards[i - 1];
       rewards[0] = rewards[0].sub(rewards[i]);
