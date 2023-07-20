@@ -14,7 +14,8 @@ async function main() {
     const Consensus = await ethers.getContractFactory("Consensus");
     const ProxyStorage = await ethers.getContractFactory("ProxyStorage");
     const Voting = await ethers.getContractFactory("Voting");
-    
+    const MultiSigWallet = await ethers.getContractFactory("MultiSigWallet");
+
     const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
     const {
@@ -108,6 +109,9 @@ async function main() {
     await deferPromise(16000);
 
     console.log(`proxyStorage.initializeAddresses: ${blockReward.address}, ${voting.address}`)
+
+    // Deploy MultiSigWallet
+    await MultiSigWallet.deploy([process.env.KEY_MAINNET!], 1)
 
 
     console.log(

@@ -446,8 +446,8 @@
       ]
     },
     "/root/DevForAudit/network/contracts/ConsensusUtils.sol": {
-      "lastModificationDate": 1689819905842,
-      "contentHash": "f0da8dc4e3991c74a8c58e0bbec22069",
+      "lastModificationDate": 1689827432553,
+      "contentHash": "fb513f14d473110323959e0b7ab6c885",
       "sourceName": "contracts/ConsensusUtils.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -810,6 +810,76 @@
       ],
       "artifacts": [
         "Migrations"
+      ]
+    },
+    "/root/DevForAudit/network/contracts/multisig-wallet/MultiSigWallet.sol": {
+      "lastModificationDate": 1689842059411,
+      "contentHash": "4ff7d946c2f3f8af89184095f1fc6e82",
+      "sourceName": "contracts/multisig-wallet/MultiSigWallet.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "MultiSigWallet"
+      ]
+    },
+    "/root/DevForAudit/network/contracts/multisig-wallet/OwnershipDataEncoder.sol": {
+      "lastModificationDate": 1689842181583,
+      "contentHash": "bb76a52cc503fa934c76afaa39ca292f",
+      "sourceName": "contracts/multisig-wallet/OwnershipDataEncoder.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "OwnershipDataEncoder"
       ]
     }
   }
