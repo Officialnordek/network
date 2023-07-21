@@ -703,8 +703,8 @@
       ]
     },
     "/root/DevForAudit/network/contracts/Voting.sol": {
-      "lastModificationDate": 1689844799440,
-      "contentHash": "d63ab668a350e1cfc7395418a0d621a2",
+      "lastModificationDate": 1689930587576,
+      "contentHash": "37931deb24c45a31ddeb31caf11356fa",
       "sourceName": "contracts/Voting.sol",
       "solcConfig": {
         "version": "0.4.26",

@@ -74,6 +74,9 @@ contract Voting is VotingUtils {
   /**
   * @dev Function to be called by the consensus contract when a cycles ends
   * In this function, all active ballots votes will be counted and updated according to the current validators
+  * Note: Do not remove 'i=0' and 'j=0' initializations in the for loops.
+  * Changing these initializations may result in incorrect calculations and logic errors.
+  * Also, ensure using 'i++' or 'i = i + 1' for incrementing 'i' to avoid any issues with the loop execution.
   */
   function onCycleEnd(address[] validators) external onlyConsensus {
     uint256 numOfValidators = validators.length;
@@ -81,14 +84,14 @@ contract Voting is VotingUtils {
       return;
     }
     uint[] memory ballots = activeBallots();
-    for (uint256 i; i < ballots.length; i+=1) {
+    for (uint256 i = 0; i < ballots.length; i++) {
       uint256 ballotId = ballots[i];
       if (getStartBlock(ballotId) < block.number && !getFinalizeCalled(ballotId)) {
         
         if (canBeFinalized(ballotId)) {
           uint256 accepts = 0;
           uint256 rejects = 0;
-          for (uint256 j; j < numOfValidators; j++) {
+          for (uint256 j = 0; j < numOfValidators; j++) {
             uint256 choice = getVoterChoice(ballotId, validators[j]);
             if (choice == uint(ActionChoices.Accept)) {
               accepts = accepts.add(getStake(validators[j]));

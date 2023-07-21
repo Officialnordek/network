@@ -868,8 +868,8 @@ contract('Voting', async (accounts) => {
       }
       expected.first.accepted.should.be.bignumber.equal(await voting.getAccepted(firstBallotId))
       expected.first.rejected.should.be.bignumber.equal(await voting.getRejected(firstBallotId))
-      // expected.second.accepted.should.be.bignumber.equal(await voting.getAccepted(secondBallotId))
-      // expected.second.rejected.should.be.bignumber.equal(await voting.getRejected(secondBallotId))
+      expected.second.accepted.should.be.bignumber.equal(await voting.getAccepted(secondBallotId))
+      expected.second.rejected.should.be.bignumber.equal(await voting.getRejected(secondBallotId))
       expected.third.accepted.should.be.bignumber.equal(await voting.getAccepted(thirdBallotId))
       expected.third.rejected.should.be.bignumber.equal(await voting.getRejected(thirdBallotId))
 
@@ -916,8 +916,8 @@ contract('Voting', async (accounts) => {
       }
       expected.first.accepted.should.be.bignumber.equal(await voting.getAccepted(firstBallotId))
       expected.first.rejected.should.be.bignumber.equal(await voting.getRejected(firstBallotId))
-      // expected.second.accepted.should.be.bignumber.equal(await voting.getAccepted(secondBallotId))
-      // expected.second.rejected.should.be.bignumber.equal(await voting.getRejected(secondBallotId))
+      expected.second.accepted.should.be.bignumber.equal(await voting.getAccepted(secondBallotId))
+      expected.second.rejected.should.be.bignumber.equal(await voting.getRejected(secondBallotId))
       expected.third.accepted.should.be.bignumber.equal(await voting.getAccepted(thirdBallotId))
       expected.third.rejected.should.be.bignumber.equal(await voting.getRejected(thirdBallotId))
 
