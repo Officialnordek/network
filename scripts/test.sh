@@ -2,7 +2,6 @@
 
 # Exit script as soon as a command fails.
 set -o errexit
-node_modules/.bin/truffle version
 # Executes cleanup function at script exit.
 trap cleanup EXIT
 
@@ -146,4 +145,4 @@ else
   start_ganache
 fi
 
-WALLET_PROVIDER_METHOD=none node_modules/.bin/truffle test "$@" --network test
+WALLET_PROVIDER_METHOD=none npx hardhat test

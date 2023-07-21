@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/root/DevForAudit/network/contracts/BlockReward.sol": {
-      "lastModificationDate": 1689819158978,
-      "contentHash": "05feef0735c9d24df2c6bad91a727791",
+      "lastModificationDate": 1689905819840,
+      "contentHash": "52b1a6979a5796dfe0ced2f63ce9297f",
       "sourceName": "contracts/BlockReward.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -187,7 +187,7 @@
       ]
     },
     "/root/DevForAudit/network/node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol": {
-      "lastModificationDate": 1689820461320,
+      "lastModificationDate": 1689855731455,
       "contentHash": "4431058fb47f3e74b9b0f9d89b677476",
       "sourceName": "openzeppelin-solidity/contracts/math/SafeMath.sol",
       "solcConfig": {
@@ -296,8 +296,8 @@
       ]
     },
     "/root/DevForAudit/network/contracts/VotingUtils.sol": {
-      "lastModificationDate": 1689819158978,
-      "contentHash": "31d4526dd004e05c5d5f7ebc9d3d1237",
+      "lastModificationDate": 1689843341187,
+      "contentHash": "0eace63ae1d650aaaee58ef10330165b",
       "sourceName": "contracts/VotingUtils.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -446,8 +446,8 @@
       ]
     },
     "/root/DevForAudit/network/contracts/ConsensusUtils.sol": {
-      "lastModificationDate": 1689827432553,
-      "contentHash": "fb513f14d473110323959e0b7ab6c885",
+      "lastModificationDate": 1689845519337,
+      "contentHash": "f970b89da59b51d223e2a4bc72120ad0",
       "sourceName": "contracts/ConsensusUtils.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -522,7 +522,7 @@
       ]
     },
     "/root/DevForAudit/network/node_modules/openzeppelin-solidity/contracts/math/Math.sol": {
-      "lastModificationDate": 1689820461320,
+      "lastModificationDate": 1689855731455,
       "contentHash": "5c717b991ea4cb0e9cc3ad8ce04b350a",
       "sourceName": "openzeppelin-solidity/contracts/math/Math.sol",
       "solcConfig": {
@@ -557,8 +557,8 @@
       ]
     },
     "/root/DevForAudit/network/contracts/Consensus.sol": {
-      "lastModificationDate": 1689819158978,
-      "contentHash": "b59fe1e1f037d0e6838936792930d9a6",
+      "lastModificationDate": 1689924050190,
+      "contentHash": "7fcbf19938d916ff900f95caf7fa7d86",
       "sourceName": "contracts/Consensus.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -666,8 +666,8 @@
       ]
     },
     "/root/DevForAudit/network/contracts/test/ConsensusMock.sol": {
-      "lastModificationDate": 1689819977341,
-      "contentHash": "81d522dadaf44a29167116cb52048527",
+      "lastModificationDate": 1689843360410,
+      "contentHash": "32bd198063a1dad01fb1c4473be9100c",
       "sourceName": "contracts/test/ConsensusMock.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -703,8 +703,8 @@
       ]
     },
     "/root/DevForAudit/network/contracts/Voting.sol": {
-      "lastModificationDate": 1689819158978,
-      "contentHash": "5829d4744611e160abe867d819ea3377",
+      "lastModificationDate": 1689844799440,
+      "contentHash": "d63ab668a350e1cfc7395418a0d621a2",
       "sourceName": "contracts/Voting.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -741,8 +741,8 @@
       ]
     },
     "/root/DevForAudit/network/contracts/test/VotingMock.sol": {
-      "lastModificationDate": 1689819158978,
-      "contentHash": "637d58eb0883b41b97da56306d908010",
+      "lastModificationDate": 1689919891745,
+      "contentHash": "1c569f3aab531f73229d55e7ae1edd13",
       "sourceName": "contracts/test/VotingMock.sol",
       "solcConfig": {
         "version": "0.4.26",
@@ -813,8 +813,8 @@
       ]
     },
     "/root/DevForAudit/network/contracts/multisig-wallet/MultiSigWallet.sol": {
-      "lastModificationDate": 1689842059411,
-      "contentHash": "4ff7d946c2f3f8af89184095f1fc6e82",
+      "lastModificationDate": 1689844761213,
+      "contentHash": "1c61def8f49f5dc96ab1d1a2ac101cae",
       "sourceName": "contracts/multisig-wallet/MultiSigWallet.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -880,6 +880,41 @@
       ],
       "artifacts": [
         "OwnershipDataEncoder"
+      ]
+    },
+    "/root/DevForAudit/network/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1689855718021,
+      "contentHash": "e2884fb4e1ef4b4a7c7ac3a227880b0f",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">= 0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
       ]
     }
   }

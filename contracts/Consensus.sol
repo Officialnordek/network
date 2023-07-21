@@ -10,6 +10,15 @@ import "./ConsensusUtils.sol";
 */
 contract Consensus is ConsensusUtils {
   /**
+  * @dev Implement Pause functionality
+  */
+  bool public paused = false;
+
+  function setPaused(bool _paused) public onlyOwner{
+    paused = _paused;
+  }
+
+  /**
   * @dev Function to be called on contract initialization
   * @param _initialValidator address of the initial validator. If not set - msg.sender will be the initial validator
   */
@@ -71,6 +80,7 @@ contract Consensus is ConsensusUtils {
   * @param _amount the amount msg.sender wishes to withdraw from the contract
   */
   function withdraw(uint256 _amount) external {
+    require(paused == false, "Contract Paused");
     _withdraw(msg.sender, _amount, msg.sender);
   }
 

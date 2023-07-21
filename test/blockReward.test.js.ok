@@ -11,7 +11,7 @@ const {toBN, toWei, toChecksumAddress} = web3.utils
 
 const INITIAL_SUPPLY = toWei(toBN(300000000000000000 || 0), 'gwei')
 const BLOCKS_PER_YEAR = 100
-const YEARLY_INFLATION_PERCENTAGE = 5
+const YEARLY_INFLATION_PERCENTAGE = 1
 const SYSTEM_ADDRESS = '0xffffFFFfFFffffffffffffffFfFFFfffFFFfFFfE'
 
 contract('BlockReward', async (accounts) => {
@@ -20,13 +20,26 @@ contract('BlockReward', async (accounts) => {
   let nonOwner = accounts[1]
   let mockSystemAddress = accounts[2]
   let voting = accounts[3]
+  // Increase the balance of the test account to 1 million Ether
+  // so that it can send ether without throwing an error
+
+  before(async () => {
+    for (let i = 0; i < accounts.length; i++) {
+      await network.provider.send("hardhat_setBalance", [
+        accounts[i],
+        "0x100000000000000000000000000",
+      ]);
+    }
+  })
 
   beforeEach(async () => {
+
     // Consensus
     consensusImpl = await Consensus.new()
     proxy = await EternalStorageProxy.new(ZERO_ADDRESS, consensusImpl.address)
     consensus = await Consensus.at(proxy.address)
     await consensus.initialize(owner)
+
 
     // ProxyStorage
     proxyStorageImpl = await ProxyStorage.new()
@@ -50,6 +63,7 @@ contract('BlockReward', async (accounts) => {
       blockReward.address,
       voting.address
     )
+
   })
 
   describe('initialize', async () => {
@@ -61,7 +75,6 @@ contract('BlockReward', async (accounts) => {
       let initialSupply = await blockReward.getTotalSupply()
       let blocksPerYear = await blockReward.getBlocksPerYear()
       let inflation = await blockReward.getInflation()
-
       INITIAL_SUPPLY.should.be.bignumber.equal(initialSupply)
       toBN(BLOCKS_PER_YEAR).should.be.bignumber.equal(blocksPerYear)
       toBN(YEARLY_INFLATION_PERCENTAGE).should.be.bignumber.equal(inflation)

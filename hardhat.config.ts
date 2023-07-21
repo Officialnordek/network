@@ -1,14 +1,9 @@
 import type { HardhatUserConfig, NetworkUserConfig } from "hardhat/types";
-import "@nomiclabs/hardhat-ethers";
-import "@nomiclabs/hardhat-web3";
-import "@nomiclabs/hardhat-truffle5";
+import "@nomicfoundation/hardhat-toolbox";
 import "hardhat-abi-exporter";
-import "hardhat-contract-sizer";
-import "solidity-coverage";
 import "dotenv/config";
-import "@nomiclabs/hardhat-etherscan";
-import "hardhat-change-network";
-
+import "@nomiclabs/hardhat-web3";
+require("@nomiclabs/hardhat-truffle5");
 
 const nordekMainnet: NetworkUserConfig = {
   url: 'https://mainnet-rpc.nordekscan.com',
@@ -17,9 +12,10 @@ const nordekMainnet: NetworkUserConfig = {
 };
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "nordekMainnet",
+  defaultNetwork: "hardhat",
   networks: {
     hardhat: {
+      initialBaseFeePerGas: 0, 
     },
     nordekMainnet,
   },
@@ -58,6 +54,9 @@ const config: HardhatUserConfig = {
       },
     ],
   },
+  mocha: {
+    timeout: 100000000
+  },
   paths: {
     sources: "./contracts",
     tests: "./test",
@@ -70,5 +69,4 @@ const config: HardhatUserConfig = {
     flat: false,
   },
 };
-
 export default config;

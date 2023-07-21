@@ -36,28 +36,28 @@ $ git clone https://github.com/Officialnordek/network.git ~/Dev/network
 
 ### Install Dependencies
 ```
-$ npm install
+$ yarn install
 ```
 
 ### Run Unit Tests
 ```
-$ npm test
+$ yarn test
 ```
 
 ## Contracts
 ### Compile
 ```
-$ npm run compile
+$ yarn run compile
 ```
 
 ### ABIs
 ```
-$ npm run abi
+$ yarn run abi
 ```
 
 ### Flatten
 ```
-$ npm run flatten
+$ yarn run flatten
 ```
 
 ### Deploy
@@ -68,7 +68,7 @@ Make sure you've created an `.env` using the template [`env.example`](https://gi
 Run:
 
 ```
-$ ./node_modules/.bin/truffle migrate --reset --network <NETWORK_NAME>
+$ yarn run deploy
 ```
 
 ## Run Local Node

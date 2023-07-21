@@ -8,11 +8,10 @@ require('chai')
 exports.SYSTEM_ADDRESS = '0xffffFFFfFFffffffffffffffFfFFFfffFFFfFFfE'
 exports.ZERO_AMOUNT = toWei(toBN(0), 'ether')
 exports.ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
-exports.ERROR_MSG = 'VM Exception while processing transaction: revert'
+exports.ERROR_MSG = 'Transaction reverted without a reason string'
 exports.ERROR_MSG_OPCODE = 'VM Exception while processing transaction: invalid opcode'
 exports.INVALID_ARGUMENTS = 'Invalid number of arguments to Solidity function'
 exports.RANDOM_ADDRESS = '0xc0ffee254729296a45a3885639AC7E10F9d54979'
-
 exports.ZERO = toBN(0)
 exports.ONE = toBN(1)
 exports.TWO = toBN(2)
