@@ -31,7 +31,7 @@
 ## General
 ### Clone Repository
 ```
-$ git clone https://github.com/Officialnordek/network.git ~/Dev/network
+$ git clone https://github.com/Officialnordek/network.git
 ```
 
 ### Install Dependencies
