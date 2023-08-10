@@ -14,7 +14,8 @@ async function main() {
     const Consensus = await ethers.getContractFactory("Consensus");
     const ProxyStorage = await ethers.getContractFactory("ProxyStorage");
     const Voting = await ethers.getContractFactory("Voting");
-    const MultiSigWallet = await ethers.getContractFactory("MultiSigWallet");
+    const GnosisSafeL2 = await ethers.getContractFactory("GnosisSafeL2");
+    const GnosisSafeProxy = await ethers.getContractFactory("GnosisSafeProxy");
 
     const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
@@ -32,7 +33,7 @@ async function main() {
     let consensus, consensusImpl
     let proxyStorage, proxyStorageImpl
     let voting, votingImpl
-
+    
       // Consensus
       // Consensus
 
@@ -110,10 +111,18 @@ async function main() {
 
     console.log(`proxyStorage.initializeAddresses: ${blockReward.address}, ${voting.address}`)
 
-    // Deploy MultiSigWallet
-    await MultiSigWallet.deploy([process.env.KEY_MAINNET!], 1)
+    // Deploy GnosisSafe MultiSigWallet
+    const gnosisSafeL2 = await GnosisSafeL2.deploy()
+    await gnosisSafeL2.deployed();
+    await deferPromise(16000);
+    console.log('GnosisSafeL2 deployed to:', gnosisSafeL2.address);
 
+    const gnosisSafeProxy = await GnosisSafeProxy.deploy(gnosisSafeL2.address)
+    await gnosisSafeProxy.deployed();
+    await deferPromise(16000);
+    console.log('GnosisSafeProxy deployed to:', gnosisSafeProxy.address);
 
+    
     console.log(
       `
       Block Reward implementation ...................... ${blockRewardImpl.address}
